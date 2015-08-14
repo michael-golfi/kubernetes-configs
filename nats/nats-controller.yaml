@@ -18,3 +18,9 @@ spec:
 	- containerPort: 4222
 	- containerPort: 6222
 	- containerPort: 8222
+	livenessProbe:
+	  httpGet:
+	    path: /varz
+	    port: 8222
+	  initialDelaySeconds: 15
+	  timeoutSeconds: 1
