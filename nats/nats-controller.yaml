@@ -7,7 +7,7 @@ spec:
   selector:
     name: nats-main
   template:
-    metadata
+    metadata:
       labels:
         name: nats-main
     spec:
