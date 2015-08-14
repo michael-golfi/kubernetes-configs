@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: nats-main
+spec:
+  replicas: 1
+  selector:
+    name: nats-main
+  template:
+    metadata
+      labels:
+        name: nats-main
+    spec:
+      containers:
+      - name: nats-main
+        image: nats
+	ports:
+	- containerPort: 4222
+	- containerPort: 6222
+	- containerPort: 8222
